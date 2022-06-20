@@ -1,0 +1,22 @@
+<!-- selector를 이용한 html 변경 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+    </head>
+    <body>
+       
+        <h2 id="hello">안녕하세요</h2>
+        <h1 id="hi">올때메로나</h1>
+        
+        <script>
+            //selector
+            document.getElementById('hello').innerHTML = '안녕';
+            document.getElementById('hello').style.color = 'skyblue';
+            document.getElementById('hello').style.fontSize = '30px';
+            document.getElementById('hi').innerHTML = '올때 바밤바';
+            document.getElementById('hi').style.color = 'brown';
+            
+        </script>
+    </body>
+</html>

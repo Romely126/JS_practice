@@ -1,0 +1,48 @@
+<!-- 함수에서의 파라미터 사용 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="alert.css">
+        <title>function2</title>
+    </head>
+    <body>
+        <div class="alert-box" id="alerts">
+            <p>Alert 박스</p>
+        </div>
+        <button onclick="useIt('block');">활성화 버튼</button>
+        <button onclick="useIt('none');">닫기 버튼</button>
+        <button onclick="changeIt('변경되었습니다 !!');">변경 버튼</button>
+        <button onclick="changeIt('Alert 박스');">되돌리기 버튼</button>
+        <button onclick="alertIt();">알람 버튼</button>
+        <button onclick="plusIt(3, 4);">숫자더하기 테스트</button>
+        <br>
+        <button onclick="login('아이디를 입력안하셨어요');">아이디</button>
+        <button onclick="login('비번을 입력안하셨어요');">비밀번호</button>
+        <script>
+            //함수 업그레이드는 파라미터 사용, 변수 사용하기!
+            
+            function useIt(a) {
+               document.getElementById('alerts').style.display = a;
+           }
+            
+            function changeIt(b) {
+               document.getElementById('alerts').innerHTML = b;
+           }
+            
+            function alertIt() {
+                alert('경고! 경고!');
+            }
+           
+            function plusIt(c, d) {
+                alert(c + d);
+            }
+            
+            function login(e) {
+                alert(e);
+            }
+            
+        </script>
+        
+        
+    </body>
+</html>

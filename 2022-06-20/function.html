@@ -1,0 +1,44 @@
+<!-- 함수를 사용한 html 제어 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="alert.css">
+        <title>function</title>
+    </head>
+    <body>
+        <div class="alert-box" id="alerts">
+            <p>Alert 박스</p>
+        </div>
+        <button onclick="openIt();">활성화 버튼</button>
+        <button onclick="closeIt();">닫기 버튼</button>
+        <button onclick="changeIt();">변경 버튼</button>
+        <button onclick="backupIt();">되돌리기 버튼</button>
+        <button onclick="alertIt();">알람 버튼</button>
+        
+        <script>
+            //미리 디자인하고 숨김 -> 원할때 JS를 이용하여 보여줌
+            
+            function openIt() {
+               document.getElementById('alerts').style.display = 'block';
+           }
+            
+            function closeIt() {
+               document.getElementById('alerts').style.display = 'none';
+           }
+           
+            function changeIt() {
+               document.getElementById('alerts').innerHTML = "변경되었습니다 !!";
+           }
+            
+            function backupIt() {
+               document.getElementById('alerts').innerHTML = "Alert 박스";
+           }
+            function alertIt() {
+                alert('경고! 경고!');
+            }
+           
+        </script>
+        
+        
+    </body>
+</html>
