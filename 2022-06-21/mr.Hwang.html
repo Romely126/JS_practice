@@ -1,0 +1,74 @@
+<!-- jQuery Selector 기초-->
+  
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <link rel="stylesheet" href="hwang.css">
+    </head>
+    <body>
+      
+       <h1 id="test"></h1>
+       <div id="phn"><img src="phone.jpg"></div>
+       <div id="hwak"><img src="hwak.jpg"></div>
+       <h4 id="text">전화를 받으려면 사진을 클릭</h4>
+       <h4 id="text-2">카톡을 읽으려면 사진을 클릭</h4>
+       <button id="btn">안읽씹</button>
+       <button id="btn-2">읽씹</button>
+       <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            
+            let name = prompt("너 이름이 뭐니?");
+            
+            $('h1').text(`야 ${name}, 너 먹을거 있냐?`);
+            
+            let a = 0, b = 0;
+            let count = 1;
+            
+            //attr은 attribute의 약자, 만능이라고 함, $('css셀렉터').attr(이걸, 이렇게)
+            $('#btn').on('click', function() {
+                a += 1;
+                $('#btn-2').css('display', 'none');
+                if(a > 2) {
+                    $('#test').css('color', 'red');
+                    $('#test').text(`${name}, 전화받아라`)
+                    $('html').css('background-color', 'black');
+                    $('#phn').css('display', 'block');
+                    $('#btn').text('전화 무시하기');
+                    $('text').css('display', 'block');
+                    $('#phn').on('click', function () {
+                        alert('그래 그래 그래야지');
+                    })
+                    b++;
+                    if(b > 2) {
+                        alert('내가 생활관으로 갈게~')
+                    }
+                }
+            })
+            
+            $('#btn-2').on('click', function() {
+                $('#btn').css('display', 'none');
+                $('#test').attr('color', 'orange');
+                $('#test').text(`어 ${name}아 나야 X ${count}`)
+                $('#phn').css('display', 'block');
+                $('#phn').on('click', function () {
+                    alert('진작에 볼것이지ㅋㅋ');
+                })
+                count++;
+                if(count > 6) {
+                    $('#hwak').css('display', 'block');
+                    $('#phn').css('display', 'none');
+                    $('#test').text(`아아, ${name} 지금 당장 행정반으로 올수있도록.`);
+                }
+            })
+            
+            
+                           
+                           
+                           
+        </script>
+        
+        <!--JS코드는 밑에 다는게 국룰-->
+        
+    </body>
+</html>

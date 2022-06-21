@@ -1,0 +1,71 @@
+<!-- jQuery Selector 기초-->
+  
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <link rel="stylesheet" href="alert.css">
+    </head>
+    <body>
+       <h1 id="test">안녕하세요</h1>
+       <button id="btn">알까?</button>
+       <button id="btn-2">알아..</button>
+       <button id="btn-3">다시 인사하기</button>
+       <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            //document.getElementById('test').innerHTML = "안죄송해";
+            /*
+            document.getElementById('btn').addEventListener('click', function() {
+                        document.getElementById('test').style = "color:red";
+                        document.getElementById('test').innerHTML = "안죄송해";
+                                                             })
+            document.getElementById('btn-2').addEventListener('mouseover', function () {
+                document.getElementById('test').style = "color:cyan";
+                document.getElementById('test').innerHTML = "죄송합니다";
+            })
+            */
+            //id를 sel하기 위해서는 #idname, class는 .class
+            
+            let a = 0, b = 0;
+            
+            //attr은 attribute의 약자, 만능이라고 함, $('css셀렉터').attr(이걸, 이렇게)
+            $('#btn').on('click', function() {
+                $('#test').css('color', 'red');
+                $('#test').text('안죄송해')
+                $('html').css('background-color', 'black');
+                a += 1;
+                if(a > 5 && b > 5) {
+                    alert('얘, 그만하렴. 나도 한계가 있단다');
+                }
+            })
+            
+            $('#btn-2').on('click', function() {
+                $('#test').css('color', 'b2ffff');
+                $('#test').text('죄송합니다.');
+                $('html').css('background-color', '92b8b1');
+                b += 1;
+                if(a > 5 && b > 5) {
+                    alert('얘, 그만하렴. 나도 한계가 있단다');
+                }
+            })
+            
+            $('#btn-3').on('click', function() {
+                $('#test').css('color', 'black');
+                $('#test').text('안녕하세요');
+                $('html').css('background-color', 'white');
+                a += 1;
+                if(a > 5) {
+                    alert('얘, 그만하렴. 나도 한계가 있단다');
+                }
+            })
+            
+            
+                           
+                           
+                           
+        </script>
+        
+        <!--JS코드는 밑에 다는게 국룰-->
+        
+    </body>
+</html>
