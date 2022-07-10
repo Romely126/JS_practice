@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+       
+        <div class="alert-box" id="id_none">
+            <p>아이디를 입력안하셨어요</p>
+            <button onclick="displayer('id_none', 'none')">창 닫기</button>
+        </div>
+        
+        <div class="alert-box" id="psw_none">
+            <p>비번을 입력안하셨어요</p>
+            <button onclick="displayer('psw_none', 'none')">창 닫기</button>
+        </div>
+        
+        <button onclick="displayer('id_none', 'block');">아이디</button>
+        <button onclick="displayer('psw_none', 'block');">비밀번호</button>
+        
+        <script>
+            
+            function displayer(a, b) {
+                document.getElementById(a).style.display = b;
+            }
+            
+        </script>
+    </body>
+</html>

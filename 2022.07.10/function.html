@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+       
+        <div class="alert-box" id="alert">Alert 박스</div>
+        <button onclick="opened();">열기버튼</button>
+        <button onclick="closed();">닫기버튼</button>
+        
+        <script>
+            
+            function opened() {
+                document.getElementById('alert').style.display = 'block';
+            }
+            
+            function closed() {
+                document.getElementById('alert').style.display = 'none';
+            }
+            
+        </script>
+    </body>
+</html>

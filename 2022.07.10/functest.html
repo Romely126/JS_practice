@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+       
+        <div class="alert-box" id="alert">Alert 박스</div>
+        <button id = "btn" onclick="btn();">열기</button>
+        
+        <script>        
+            
+            let stat = document.getElementById('alert').style.display
+            
+            function btn() {
+                if(stat == 'none')
+                    {
+                        document.getElementById('alert').style.display = 'block';
+                        document.getElementById('btn').innerHTML = '닫기';
+                    }
+                else if(stat == 'block')
+                    {
+                        document.getElementById('alert').style.display = 'none';
+                        document.getElementById('btn').innerHTML = '열기';
+                    }
+            }
+            
+        </script>
+    </body>
+</html>

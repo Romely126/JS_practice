@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+       
+        <div class="alert-box" id="alert">
+            <p id="title">안녕하세요</p>
+            <button id="closeBtn">창 닫기</button>
+        </div>
+        
+        <button id="idBtn">아이디</button>
+        <button id="pwBtn">비밀번호</button>
+        
+        <script>
+            
+            document.getElementById('closeBtn').addEventListener('click', function(){
+                document.getElementById('alert').style.display = 'none';
+            });
+            
+            document.getElementById('idBtn').addEventListener('mouseover', function(){
+                document.getElementById('title').innerHTML = '아이디를 입력해주세요';
+                document.getElementById('alert').style.display = 'block';
+            })
+            
+            document.getElementById('pwBtn').addEventListener('mouseover', function(){
+                document.getElementById('title').innerHTML = '비번을 입력해주세요';
+                document.getElementById('alert').style.display = 'block';
+            })
+            
+            /*
+            function displayer(a, b) {
+                document.getElementById(a).style.display = b;
+            }
+           
+            
+            function displayIt(a) {
+                document.getElementById('title').innerHTML = a;
+                document.getElementById('alert').style.display = 'block';
+            }
+            */
+            
+        </script>
+    </body>
+</html>
